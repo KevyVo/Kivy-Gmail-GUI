@@ -1,0 +1,285 @@
+#:kivy 1.11.0
+<CreateAccountWindow>:
+    name: "create"
+
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.35, "top":0.8}
+                size_hint: 0.6, 0.08
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.35, "top":0.8-0.13}
+                size_hint: 0.6, 0.08
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.35, "top":0.8-0.13*2}
+                size_hint: 0.6, 0.08
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+        Button:
+            text: "Quit"
+            on_press: root.quit()
+            pos_hint: {'center_x': 0.03, 'center_y': 0.03}
+            size_hint: 0.05, 0.05
+            spacing: 10
+            background_color: (1.0, 0.0, 0.0, 1.0)
+        CheckBox:
+            text: 'Ok'
+            pos_hint: {'center_x': 0.03, 'center_y': 0.98}
+            size_hint: 0.01, 0.01
+        ToggleButton:
+            text: 'Ok'
+            pos_hint: {'center_x': 0.03, 'center_y': 0.93}
+            size_hint: 0.01, 0.01
+
+<LoginWindow>:
+    name: "login"
+
+    email: email
+    password: password
+
+    FloatLayout:
+
+        Label:
+            text:"Email: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.138, "top":0.85}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.38 , "top":0.85}
+            size_hint: 0.55, 0.10
+
+        Label:
+            text:"Password: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.38, "top":0.7}
+            size_hint: 0.55, 0.10
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.2
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Login"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.loginBtn()
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Don't have an Account? Create One"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+        Button:
+            text: "Quit"
+            on_press: root.quit()
+            pos_hint: {'center_x': 0.03, 'center_y': 0.03}
+            size_hint: 0.05, 0.05
+            spacing: 10
+            background_color: (1.0, 0.0, 0.0, 1.0)
+
+
+<MainWindow>:
+    n: n
+    email: email
+    created:created
+
+    RelativeLayout:
+        Label:
+            id: n
+            text: "Name: "
+            pos_hint: {'center_x': 0.15, 'center_y': 0.98}
+        Label:
+            id: email
+            text: "Email: "
+            pos_hint: {'center_x': 0.5, 'center_y': 0.98}
+        Label:
+            id: created
+            text: "Created: "
+            pos_hint: {'center_x': 0.85, 'center_y': 0.98}
+
+       
+        Label:
+            text: "To: "
+            pos_hint: {'center_x': 0.08, 'center_y': 0.9}
+        TextInput:
+            id: tosend
+            multinline:False
+            size_hint: (None, None)
+            pos_hint: {'center_x': 0.55, 'center_y': 0.9}
+            height: 30
+            width: 625
+        Label:
+            pos_hint: {'center_x': 0.1, 'center_y': 0.84}
+            text: "Subject: "
+        TextInput:
+            id: sub
+            multinline:False
+            size_hint: (None, None)
+            height: 30
+            pos_hint: {'center_x': 0.55, 'center_y': 0.84}
+            width: 625
+        Label:
+            text: "Body: "
+            pos_hint: {'center_x': 0.09, 'center_y': 0.72}
+        TextInput:
+            id: body
+            multinline:False
+            size_hint: (None, None)
+            height: 250
+            width: 625
+            pos_hint: {'center_x': 0.55, 'center_y': 0.53}
+        Label:
+            text: "Attachments: "
+            pos_hint: {'center_x': 0.1, 'center_y': 0.275}
+        Label:
+			id: sent
+			text: root.sent
+            pos_hint: {'center_x': 0.88, 'center_y': 0.025}
+        Button:
+            pos_hint: {'center_x': 0.75, 'center_y': 0.1}
+            size_hint: 0.2, 0.1
+            spacing: 10
+            text: "Send"
+            on_press: root.send()
+        Button:
+            text: "Reset"
+            on_press: root.reset()
+            pos_hint: {'center_x': 0.525, 'center_y': 0.1}
+            size_hint: 0.2, 0.1
+            spacing: 10
+        Button:
+            text: "Quit"
+            on_press: root.quit()
+            pos_hint: {'center_x': 0.03, 'center_y': 0.03}
+            size_hint: 0.05, 0.05
+            spacing: 10
+            background_color: (1.0, 0.0, 0.0, 1.0)
+        Button:
+            pos_hint: {'center_x': 0.3, 'center_y': 0.1}
+            size_hint:0.2,0.1
+            spacing: 10
+            text: "Log Out"
+            on_release:
+                app.root.current = "login"
+                root.manager.transition.direction = "down"
+        StackLayout:
+            orientation: 'lr-tb'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint_y: None
+            height: 30
+            spacing: 5
+            Label:
+                text: ''
+                size_hint_x: 1
+            Label:
+                text: ''
+                size_hint_x: 0.2
+            Button:
+                text: 'Choose File'
+                size_hint_x: 0.2
+                on_press: root.open_popup()
+            TextInput:
+                id: get_file
+                readonly: True
+                size_hint_x: 0.4
+            Label:
+                text: ''
+                size_hint_x: 0.2
+    
+<FileChoosePopup>:
+    title: "Choose a .CSV File"
+    size_hint: .9, .9
+    auto_dismiss: False
+
+    BoxLayout:
+        orientation: "vertical"
+        FileChooser:
+            id: filechooser
+            FileChooserIconLayout
+
+        BoxLayout:
+            size_hint: (1, 0.1)
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            spacing: 20
+            Button:
+                text: "Cancel"
+                on_release: root.dismiss()
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.selection)
+                id: ldbtn
+                disabled: True if filechooser.selection==[] else False   
