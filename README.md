@@ -10,11 +10,16 @@ The source files will be uploaded here in the meantime and if you want you attem
 
 Login Screen
 ![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/login.JPG)
-Create Account
-![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/Create%20Account.JPG)
+
+<p align="left">
+  <img width="460" height="300" src="https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/Create%20Account.JPG"></img>
+</p>
+
 E-mail creation
 ![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/e-mail.JPG)
+
 Upload Manager
 ![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/files.JPG)
+
 Code
 ![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/code.JPG)
