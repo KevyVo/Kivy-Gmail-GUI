@@ -7,3 +7,14 @@ Kivy is pretty must like tkinter but uses OpenGL for more of a beautiful UI.
 
 I am currently still making a youtube video on how to create as well as a write on the dependies and the code.
 The source files will be uploaded here in the meantime and if you want you attempt to make run yourselves, if not stay posted more the updated guide.
+
+Login Screen
+![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/login.JPG)
+Create Account
+![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/Create%20Account.JPG)
+E-mail creation
+![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/e-mail.JPG)
+Upload Manager
+![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/files.JPG)
+Code
+![Image description](https://github.com/KevyVo/Kivy-Gmail-GUI/blob/master/Kivy_GUI_Pictures/code.JPG)
